@@ -874,7 +874,7 @@ div.title {
 		ab.size = asteroidBeltSize();
 		ab.characteristics = asteroidBeltCharacteristics();
 		ab.color = gasGiantColor();
-		ab.temperature = gasGiantTemperature();
+		ab.composition = asteroidBeltComposition();
 		var pop = roll();
 		if (pop > 3) {
 			pop = pop - 3;
@@ -890,7 +890,7 @@ div.title {
 		debug(String.format(headerTemplate, p.name));
 		debug(String.format(cellTemplate, "Size",  p.size));
 		debug(String.format(cellTemplate, "Color", p.color));
-		debug(String.format(cellTemplate, "Temperature", p.temperature));
+		debug(String.format(cellTemplate, "Comopsition", p.composition));
 		debug(String.format(cellTemplate, "Characteristics", p.characteristics));
 		debug(String.format(cellTemplate, "Population", populationString(p.population)));
 		debug(String.format(cellTemplate, "Space Port",  spaceportString(p.spaceport)));
