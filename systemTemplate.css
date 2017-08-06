@@ -1,0 +1,42 @@
+@media print {
+	body * {
+		visibility: hidden;
+	}
+	#section-to-print, #section-to-print * {
+		visibility: visible;
+	}
+	#section-to-print {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+div.disp {
+	width: 25em;
+}
+
+div.sep {
+	background-color: white;
+}
+
+div.cell {
+	background-color: lightgray;
+}
+
+div.lab {
+	font-family: monospace;
+	color: black;
+}
+
+div.val {
+	font-family: sans-serif;
+	font-size: 1.25em;
+	color: black;
+}
+
+div.title {
+	font-family: sans-serif;
+	font-size: 1.5em;
+	color: black;
+}
