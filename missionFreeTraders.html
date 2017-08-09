@@ -18,14 +18,14 @@ script
 <script>
 
 	var generate = function() {
-		var mission = missionType();
-		employerAgents(mission);
-		rewardsAgents(mission);
-		missionAgents(mission);
-		locationAgents(mission);
+		var mission = missionType("Free Traders");
+		employerFreeTraders(mission);
+		rewardsFreeTraders(mission);
+		missionFreeTraders(mission);
+		locationFreeTraders(mission);
 		var i = 0;
 		for (i = 0; i < mission.numComplications; i++) {
-			mission.addComplication(complicationAgents());
+			mission.addComplication(complicationFreeTraders());
 		}
 		clearDebug();
 		mission.print();
