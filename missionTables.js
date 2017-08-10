@@ -1138,6 +1138,763 @@ var complicationExplorers = function() {
 
 
 
+//Table 34
+var employerPilgrims = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.employer = "Nomad mystic";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.employer = "Prophet";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.employer = "Courtesan";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		m.employer = "Patron";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.employer = "Factionary";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.employer = "Merchant";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.employer = "Preacher";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.employer = "Pilgrim";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.employer = "Hermit";
+		break;
+	}
+};
+
+var employerEntertainers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.employer = "Director";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.employer = "Poet";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.employer = "Courtesan";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		m.employer = "Patron";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.employer = "Factionary";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.employer = "Musician";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.employer = "Circus director ";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.employer = "Tarrab";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.employer = "Acrobat";
+		break;
+	}
+};
+
+var employerNomads = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.employer = "Clan leader";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.employer = "Prophet";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.employer = "Plantation owner";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		m.employer = "Patron";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.employer = "Factionary";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.employer = "Travelling peddler";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.employer = "Nomad warrior";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.employer = "Colonist";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.employer = "Industrialist";
+		break;
+	}
+};
+
+
+// Table 34
+var rewardsPilgrims = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.reward = "Holy relic/artifact ";
+		break;
+	case "14":
+	case "15":
+	case "16":
+	case "21":
+	case "22":
+	case "23":
+		m.reward = "New voyage funded ";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+		m.reward = "Gear";
+		break;
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+		m.reward = "Birr";
+		break;
+	case "51":
+	case "52":
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		m.reward = "Ship module/feature ";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.reward = "Temple constructed ";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.reward = "Absolution/blessing ";
+		break;
+	}
+};
+
+var rewardsEntertainers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.reward = "New contract ";
+		break;
+	case "14":
+	case "15":
+	case "16":
+	case "21":
+	case "22":
+	case "23":
+		m.reward = "New play funded";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+		m.reward = "Gear";
+		break;
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+		m.reward = "Birr";
+		break;
+	case "51":
+	case "52":
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		m.reward = "Ship module/feature ";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.reward = "Fame";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.reward = "Faction reputation";
+		break;
+	}
+};
+
+var rewardsNomads = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.reward = "New scrap ship/colony";
+		break;
+	case "14":
+	case "15":
+	case "16":
+	case "21":
+	case "22":
+	case "23":
+		m.reward = "New colony funded";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+		m.reward = "Gear";
+		break;
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+		m.reward = "Birr";
+		break;
+	case "51":
+	case "52":
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		m.reward = "Ship module/feature ";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.reward = "Vehicle";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.reward = "Faction protection";
+		break;
+	}
+};
+
+
+
+
+// Table 35
+var missionPilgrims = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.mission = "Pilgrimage";
+		m.description = "";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.mission = "Supply run";
+		m.description = "";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.mission = "Monastery visit ";
+		m.description = "";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.mission = "Establish missionary colony";
+		m.description = "";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.mission = "Missionary trip";
+		m.description = "";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.mission = "Construct temple";
+		m.description = "";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.mission = "Acquire relic";
+		m.description = "";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.mission = "Destroy relic/idol";
+		m.description = "";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.mission = "Find prophet";
+		m.description = "";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.mission = "Fulfill prophecy";
+		m.description = "";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.mission = "Represent temple";
+		m.description = "";
+		break;
+	}
+};
+
+var missionEntertainers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.mission = "Find literature";
+		m.description = "";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.mission = "Service a set";
+		m.description = "";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.mission = "Guest performance";
+		m.description = "";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.mission = "Organize a carnival";
+		m.description = "";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.mission = "Bazaar performance";
+		m.description = "";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.mission = "Holo movie";
+		m.description = "";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.mission = "Play";
+		m.description = "";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.mission = "Circus performance";
+		m.description = "";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.mission = "Pleasure cruise";
+		m.description = "";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.mission = "Dignitary performance";
+		m.description = "";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.mission = "Concert";
+		m.description = "";
+		break;
+	}
+};
+
+var missionNomads = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.mission = "Plantation construction";
+		m.description = "";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.mission = "Supply run";
+		m.description = "";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.mission = "Guest work";
+		m.description = "";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.mission = "Start a colony ";
+		m.description = "";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.mission = "Collect asteroid";
+		m.description = "";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.mission = "Construction work";
+		m.description = "";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.mission = "Act of revenge";
+		m.description = "";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.mission = "Service bulk hauler";
+		m.description = "";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.mission = "Loading";
+		m.description = "";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.mission = "Repairs";
+		m.description = "";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.mission = "Diplomatic representation";
+		m.description = "";
+		break;
+	}
+};
+
+
+
+//Table 36
+var locationPilgrims = function(m) {
+};
+
+//Table 37
+var complicationPilgrims = function() {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		return new complication( "Cult", "");
+	case "14":
+	case "15":
+	case "16":
+		return new complication( "Nature's wrath", "");
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		return new complication( "Doomsday prophecy", "");
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+	case "51":
+	case "52":
+		return new complication( "Lack of resources", "");
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		return new complication( "Starvation", "");
+	case "61":
+	case "62":
+	case "63":
+		return new complication( "Diva", "");
+	case "64":
+	case "65":
+	case "66":
+		return new complication( "Iconic intervention", "");
+	}
+};
+
+//Table 37
+var complicationEntertainers = function() {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+	case "14":
+	case "15":
+	case "16":
+		return new complication( "Restrictions", "");
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		return new complication( "Nature's wrath", "");
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+		return new complication( "Rival group ", "");
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+	case "51":
+	case "52":
+		return new complication( "Lack of resources", "");
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		return new complication( "Wrong equipment", "");
+	case "61":
+	case "62":
+	case "63":
+		return new complication( "Diva", "");
+	case "64":
+	case "65":
+	case "66":
+		return new complication( "War", "");
+	}
+};
+
+//Table 37
+var complicationNomads = function() {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+	case "14":
+	case "15":
+	case "16":
+		return new complication( "The crack of the whip", "");
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		return new complication( "Nature's wrath", "");
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+		return new complication( "Corsairs", "");
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+	case "51":
+	case "52":
+		return new complication( "Lack of resources", "");
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		return new complication( "Starvation", "");
+	case "61":
+	case "62":
+	case "63":
+		return new complication( "Faction", "");
+	case "64":
+	case "65":
+	case "66":
+		return new complication( "Rebels", "");
+	}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
