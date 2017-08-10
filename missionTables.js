@@ -464,6 +464,691 @@ var complicationAgents = function() {
 
 
 
+
+// Table 24
+var employerMercenaries = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.employer = "Fleet captain";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.employer = "Military officer";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.employer = "Legion company";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		m.employer = "Patron";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.employer = "Factionary";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.employer = "Arms dealer";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.employer = "Mercenary";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.employer = "War verteran";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.employer = "Smuggler";
+		break;
+	}
+};
+
+// Table 25
+var rewardsMercenaries = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+	case "14":
+	case "15":
+	case "16":
+		m.reward = "Faction Protection";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.reward = "Ship module";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+		m.reward = "Birr";
+		break;
+	case "51":
+	case "52":
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		m.reward = "Gear";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.reward = "Cybernetics/Bionics";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.reward = "Medal of Honor";
+		break;
+	}
+};
+
+// Table 26
+var missionMercenaries = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.mission = "Reconnaissance";
+		m.description = "Scout out an area, a location or the surroundings of a building. Remain unnoticed and report back to the employer";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.mission = "Assault";
+		m.description = "Attack and hold a location. Prisoners may be taken.";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.mission = "Defend place or area ";
+		m.description = "Defend a location or patrol an area; prevent the enemy from seizing it.";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.mission = "Reinforce location";
+		m.description = "Support or reinforce a position under attack, repel the enemy.";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.mission = "Seek and destroy";
+		m.description = "Find a person, group or location and destroy it. Could be civilians, enemy combatants or vehicles/spaceships.";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.mission = "Protect resource";
+		m.description = "Protect a resource. It could be information, a person, an object or a ship. Protect it from an attack or guard it for a specified amount of time.";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.mission = "Locate resource";
+		m.description = "Locate a person, group or object and either retrieve it or notify the employer of its location.";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.mission = "Rescue operation";
+		m.description = "Rescue a group, squadron or spaceship from an attack, imprisonment, or some other peril";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.mission = "Raid";
+		m.description = "Plan and execute a raid on a person, group, convoy or vehicle. The goal is usually to destroy or delay the target.";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.mission = "Investigation";
+		m.description = "Locate something important, for example nuclear warheads, antimatter bombs or bionic weapons. The PCs could be accompanied by an agent, a weapons expert or some other officer.";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.mission = "Incursion";
+		m.description = "Go behind enemy lines or breach a fortress or garrison to secure a resource that could be a person, information or an object.";
+		break;
+	}
+};
+
+
+//Table 27
+var locationMercenaries = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.location = "Underground bunker";
+		m.locationDescription = "A bunker, catacombs or caves";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.location = "Hostile forest/jungles/desert";
+		m.locationDescription = "Inhospitable planet side wilderness. Usually far from cities or settlements.";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.location = "Trenches";
+		m.locationDescription = "A trench on a deadlocked frontline. Mine fields, underground tunnels and other soldiers in despair.";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.location = "Spaceport";
+		m.locationDescription = "Spaceport on a space station or planet";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.location = "Asteroid/Moon";
+		m.locationDescription = "The surface of an asteroid or a smaller moon. Vacuum or dangerous atmosphere";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.location = "Combat station";
+		m.locationDescription = "A fortified space station with weapon systems, or some other battle installation such as a larger garrison, hangars or docks.";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.location = "War zone ";
+		m.locationDescription = "A larger area where open war is raging. Could be a burned-out city or a wilderness full of fighting combatants.";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.location = "Fortification";
+		m.locationDescription = "A fortification could be a wall, modern fort, castle, artillery position, rocket silo or mine field.";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.location = "Space station";
+		m.locationDescription = "On a small space station, anything from an oxygen oasis to a trade or service station";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.location = "Spaceship";
+		m.locationDescription = "Onboard a spaceship during voyage or docking";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.location = "Outpost";
+		m.locationDescription = "A small outpost, usually planet side. An outpost is commonly just a single building with a specific function and only a few inhabitants. For example sensor station, dam control station, courier post or someother communications station";
+		break;
+	}
+};
+
+//Table 28
+var complicationMercenaries = function() {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+	case "14":
+	case "15":
+	case "16":
+		return new complication( "Bad intel", "A piece of information about the mission turns out to be false, either intentionally or by mistake.");
+	case "21":
+	case "22":
+	case "23":
+		return new complication( "Super cargo", "Someone they must protect during the mission accompanies the group. It could be an observer, a civilian or an agent.");
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+		return new complication( "Gear problem", "The group has gear problems. It could be anything from weapons to vehicles or spaceships.");
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		return new complication( "Underestimated resistance", "The resistance or the attackers are stronger than expected.");
+		break;
+	case "44":
+	case "45":
+	case "46":
+	case "51":
+	case "52":
+	case "53":
+		return new complication( "Captured employer", "The group's employer is captured during the mission. Fitting if the employer is an officer in the group's company.");
+		break;
+	case "54":
+	case "55":
+	case "56":
+	case "61":
+	case "62":
+	case "63":
+		return new complication( "New offensive", "A new offensive has just been initiated when the group is about to carry out their mission, either by the enemies or by the PCs' side in the conflict");
+		break;
+	case "64":
+	case "65":
+	case "66":
+		return new complication( "Bombardments","The area where the mission takes place is being bombed. It could be air raids, torpedo attacks or rebel forces detonating mines and homemade explosives.");
+		break;
+	}
+};
+
+
+//Table 29
+var employerExplorers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.employer = "Archaeologist";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.employer = "Scientist";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.employer = "Artifact merchant";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		m.employer = "Patron";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.employer = "Factionary";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.employer = "Correspondent";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.employer = "Prospector";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.employer = "Wealthy collector";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.employer = "Criminal";
+		break;
+	}
+};
+
+// Table 30
+var rewardsExplorers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.reward = "Expedition of their own";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.reward = "Ship module";
+		break;
+	case "21":
+	case "22":
+	case "23":
+		m.reward = "Vehicle";
+		break;
+	case "24":
+	case "25":
+	case "26":
+	case "31":
+	case "32":
+	case "33":
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+	case "44":
+	case "45":
+	case "46":
+		m.reward = "New knowledge";
+		break;
+	case "51":
+	case "52":
+	case "53":
+	case "54":
+	case "55":
+	case "56":
+		m.reward = "Birr";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.reward = "Gear";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.reward = "Artifact";
+		break;
+	}
+};
+
+// Table 31
+var missionExplorers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.mission = "Excavation";
+		m.description = "Perform an excavation, start a dig site or help in an already started excavation.";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.mission = "Collection";
+		m.description = "Collect smaller archaeological finds, artifacts, information, scrolls or something similar. Could be from a dig site or some other location.";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.mission = "Survey";
+		m.description = "Map a location or an area for the employer. Report back with sensor maps and other collected data.";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.mission = "Secure outpost ";
+		m.description = "Protect a smaller colony such as a dig site, Bulletin station, sensor station or radio beacon from an attack or from nature's wrath for a specified amount of time";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.mission = "Assist colony ";
+		m.description = "Assist a smaller colony with gear, information or expert knowledge about exo use, medicurgy, construction or something else.";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.mission = "Artifact hunt ";
+		m.description = "Find an artifact. The location and sometimes the function are unknown. Clues must be tracked down before departure";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.mission = "Investigation";
+		m.description = "Locate something important, for example lost ruins, a dig site or a surveyed location. The PCs could be accompanied by an external expert such as an archaeologist, correspondent or diplomat.";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.mission = "Find information ";
+		m.description = "Find a specific piece of information for the employer. Sometimes, the group does not know the intended use of the information.";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.mission = "Prospecting";
+		m.description = "Command a prospecting expedition or secure a claim somewhere. It could be mining, asteroid harvesting, logging or gas or dust trawling.";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.mission = "Rescue expedition ";
+		m.description = "Rescue a group, colony, archaeological expedition or correspondents from an attack or some other peril. Sometimes, the group does not know what has happened to the victims.";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.mission = "Big game hunt";
+		m.description = "Command or join in an expedition hunting a monster or some other creature.";
+		break;
+	}
+};
+
+
+//Table 32
+var locationExplorers = function(m) {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+		m.location = "Underground catacombs";
+		m.locationDescription = "Catacombs, tombs or underground ruins.";
+		break;
+	case "14":
+	case "15":
+	case "16":
+		m.location = "Hostile forest/jungles/desert";
+		m.locationDescription = "Inhospitable planet side wilderness. Usually far from cities or settlements.";
+		break;
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		m.location = "Library";
+		m.locationDescription = "A library or database hub. Could contain anything from scrolls to memory tags and djinn memories";
+		break;
+	case "31":
+	case "32":
+	case "33":
+		m.location = "Moon";
+		m.locationDescription = "The surface of a moon. Usually vacuum or dangerous atmosphere. Planet-like moons count as wilderness (above).";
+		break;
+	case "34":
+	case "35":
+	case "36":
+		m.location = "Asteroid belt";
+		m.locationDescription = "An asteroid belt or a debris or gas cloud.";
+		break;
+	case "41":
+	case "42":
+	case "43":
+		m.location = "Ruins";
+		m.locationDescription = "Ruins, either Firstcome, unknown or created by a conflict.";
+		break;
+	case "44":
+	case "45":
+	case "46":
+		m.location = "Portal Builder remains";
+		m.locationDescription = "Portal Builder remains. Usually mystical but sometimes intact or functioning.";
+		break;
+	case "51":
+	case "52":
+	case "53":
+		m.location = "Lost colony";
+		m.locationDescription = "A colony that lost contact with the Horizon several segments or cycles ago.";
+		break;
+	case "54":
+	case "55":
+	case "56":
+		m.location = "Space station";
+		m.locationDescription = "On a small space station, anything from an oxygen oasis to a trade or service station. Could be abandoned or destroyed.";
+		break;
+	case "61":
+	case "62":
+	case "63":
+		m.location = "Spaceship";
+		m.locationDescription = "Onboard a spaceship during voyage or docking";
+		break;
+	case "64":
+	case "65":
+	case "66":
+		m.location = "One of the wonders of the Horizon";
+		m.locationDescription = "A large size artifact, like artificial moons or micro suns. The GM is free to decide its exact nature.";
+		break;
+	}
+};
+
+//Table 33
+var complicationExplorers = function() {
+	var r = "" + roll() + roll();
+	switch (r) {
+	case "11":
+	case "12":
+	case "13":
+	case "14":
+	case "15":
+	case "16":
+		return new complication( "Bad intel", "A piece of information about the mission turns out to be false, either intentionally or by mistake.");
+	case "21":
+	case "22":
+	case "23":
+	case "24":
+	case "25":
+	case "26":
+		return new complication( "Nature's wrath", "The expedition is subjected to nature's wrath. It could be anything from ion storms, bad weather and meteorite showers to landslides or flash floods.");
+	case "31":
+	case "32":
+	case "33":
+		return new complication( "Corsairs", "Corsairs attack the expedition.");
+	case "34":
+	case "35":
+	case "36":
+	case "41":
+	case "42":
+	case "43":
+		return new complication( "Rival expedition", "A competing party has the same goal as the expedition and tries to get there first or stop the PCs. They have roughly the same gear as the PCs.");
+		break;
+	case "44":
+	case "45":
+	case "46":
+	case "51":
+	case "52":
+	case "53":
+		return new complication( "Blockade", "The destination is under blockade. It could be anything from tolls or anti-smuggling measures to factionary war.");
+		break;
+	case "54":
+	case "55":
+	case "56":
+	case "61":
+	case "62":
+	case "63":
+		return new complication( "Quarantine", "The destination is placed under quarantine. It could be because of a contagion, a mind meme, dangerous technology or something else.");
+		break;
+	case "64":
+	case "65":
+	case "66":
+		return new complication( "Intelligence agency","The expedition's goals interfere with the work of an intelligence agency. Intelligence agencies usually have a lot of resources and few scruples.");
+		break;
+	}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Table 38
 var employerFreeTraders = function(m) {
 	var r = "" + roll() + roll();
