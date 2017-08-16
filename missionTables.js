@@ -56,7 +56,7 @@ var mission = function(t, m, d, c, b, e) {
 		debug(String.format(cellTemplate, "Mission", that.mission));
 		debug(String.format(cellTemplate, "Mission Description", that.description));
 		debug(String.format(cellTemplate, "Location", that.location));
-		debug(String.format(cellTemplate, "location Description", that.locationDescription));
+		debug(String.format(cellTemplate, "Location Description", that.locationDescription));
 //		debug(String.format(cellTemplate, "# Complications", that.numComplications));
 		$.each(that.complications, function(c,i){
 			debug(String.format(cellTemplate, "Complication", this.complication));
@@ -1500,13 +1500,13 @@ var missionPilgrims = function(m) {
 	case "12":
 	case "13":
 		m.mission = "Pilgrimage";
-		m.description = "";
+		m.description = "A pilgrimage to one of the Horizon's important temples or holy sites.";
 		break;
 	case "14":
 	case "15":
 	case "16":
 		m.mission = "Supply run";
-		m.description = "";
+		m.description = "Bring supplies to somewhere.";
 		break;
 	case "21":
 	case "22":
@@ -1515,55 +1515,55 @@ var missionPilgrims = function(m) {
 	case "25":
 	case "26":
 		m.mission = "Monastery visit ";
-		m.description = "";
+		m.description = "Travel to a monastery and remain there for some time.";
 		break;
 	case "31":
 	case "32":
 	case "33":
 		m.mission = "Establish missionary colony";
-		m.description = "";
+		m.description = "Establish a missionary colony and spread the faith in an area.";
 		break;
 	case "34":
 	case "35":
 	case "36":
 		m.mission = "Missionary trip";
-		m.description = "";
+		m.description = "Travel to several locations and spread the faith.";
 		break;
 	case "41":
 	case "42":
 	case "43":
 		m.mission = "Construct temple";
-		m.description = "";
+		m.description = "Help build a temple, from construction to inauguration, perhaps staying on to run the temple.";
 		break;
 	case "44":
 	case "45":
 	case "46":
 		m.mission = "Acquire relic";
-		m.description = "";
+		m.description = "Acquire a holy relic. It could be body part from a martyr or a hero, an object with sacred writing on it or a religious symbol";
 		break;
 	case "51":
 	case "52":
 	case "53":
 		m.mission = "Destroy relic/idol";
-		m.description = "";
+		m.description = "Find a dangerous or tainted relic or a heathen idol and destroy it.";
 		break;
 	case "54":
 	case "55":
 	case "56":
 		m.mission = "Find prophet";
-		m.description = "";
+		m.description = "Find a lost prophet, seer, ascetic or preacher.";
 		break;
 	case "61":
 	case "62":
 	case "63":
 		m.mission = "Fulfill prophecy";
-		m.description = "";
+		m.description = "Help the Icons so that a prophecy is fulfilled.";
 		break;
 	case "64":
 	case "65":
 	case "66":
 		m.mission = "Represent temple";
-		m.description = "";
+		m.description = "Represent a temple in another location, such as during a sacred meeting, diplomatic trip or missionary voyage";
 		break;
 	}
 };
@@ -1575,13 +1575,13 @@ var missionEntertainers = function(m) {
 	case "12":
 	case "13":
 		m.mission = "Find literature";
-		m.description = "";
+		m.description = "Investigate and find lost literature. Could be anything from oral stories to blood operas or songs.";
 		break;
 	case "14":
 	case "15":
 	case "16":
 		m.mission = "Service a set";
-		m.description = "";
+		m.description = "Service a set. Could be anything from make-up, lighting and camera operating to catering or relaxation.";
 		break;
 	case "21":
 	case "22":
@@ -1590,55 +1590,55 @@ var missionEntertainers = function(m) {
 	case "25":
 	case "26":
 		m.mission = "Guest performance";
-		m.description = "";
+		m.description = "Perform somewhere by special invitation.";
 		break;
 	case "31":
 	case "32":
 	case "33":
 		m.mission = "Organize a carnival";
-		m.description = "";
+		m.description = "Organize a carnival, coordinate with other entertainers, acrobats and circuses.";
 		break;
 	case "34":
 	case "35":
 	case "36":
 		m.mission = "Bazaar performance";
-		m.description = "";
+		m.description = "A series of smaller performances in a bazaar or market.";
 		break;
 	case "41":
 	case "42":
 	case "43":
 		m.mission = "Holo movie";
-		m.description = "";
+		m.description = "Work with a holo movie, acting and/or directing.";
 		break;
 	case "44":
 	case "45":
 	case "46":
 		m.mission = "Play";
-		m.description = "";
+		m.description = "Perform a play in a theater or an opera house.";
 		break;
 	case "51":
 	case "52":
 	case "53":
 		m.mission = "Circus performance";
-		m.description = "";
+		m.description = "Perform in a circus show. Could be acrobatics, magic or animal/monster taming";
 		break;
 	case "54":
 	case "55":
 	case "56":
 		m.mission = "Pleasure cruise";
-		m.description = "";
+		m.description = "Take part in a pleasure cruise for the rich.";
 		break;
 	case "61":
 	case "62":
 	case "63":
 		m.mission = "Dignitary performance";
-		m.description = "";
+		m.description = "Perform for high-ranking dignitaries or factionaries.";
 		break;
 	case "64":
 	case "65":
 	case "66":
 		m.mission = "Concert";
-		m.description = "";
+		m.description = "Put on a concert with musical instruments and/or singing.";
 		break;
 	}
 };
@@ -1650,13 +1650,13 @@ var missionNomads = function(m) {
 	case "12":
 	case "13":
 		m.mission = "Plantation construction";
-		m.description = "";
+		m.description = "Construct a new plantation and plant crops.";
 		break;
 	case "14":
 	case "15":
 	case "16":
 		m.mission = "Supply run";
-		m.description = "";
+		m.description = "Bring supplies to somewhere.";
 		break;
 	case "21":
 	case "22":
@@ -1665,55 +1665,55 @@ var missionNomads = function(m) {
 	case "25":
 	case "26":
 		m.mission = "Guest work";
-		m.description = "";
+		m.description = "Work in a factory or with service for a shorter period of time or one season. It could be harvesting, transportation, cleaning or servant work.";
 		break;
 	case "31":
 	case "32":
 	case "33":
 		m.mission = "Start a colony ";
-		m.description = "";
+		m.description = "Build a colony or prepare a location before the colonists arrive.";
 		break;
 	case "34":
 	case "35":
 	case "36":
 		m.mission = "Collect asteroid";
-		m.description = "";
+		m.description = "Collect or tow an asteroid or ice block to prospectors or a refinery unit.";
 		break;
 	case "41":
 	case "42":
 	case "43":
 		m.mission = "Construction work";
-		m.description = "";
+		m.description = "Build something big, such as a dam, a mine or a large complex like a spaceport or a station.";
 		break;
 	case "44":
 	case "45":
 	case "46":
 		m.mission = "Act of revenge";
-		m.description = "";
+		m.description = "Exact vengeance on another group of plebeians or non-unionized workers. Could be sabotaging cargo or loading, burning stockpiled goods or destroying a ship or gear while in dock or storage.";
 		break;
 	case "51":
 	case "52":
 	case "53":
 		m.mission = "Service bulk hauler";
-		m.description = "";
+		m.description = "Servicing a bulk hauler with loading and unloading, plus running shuttle traffic down to a planet if necessary.";
 		break;
 	case "54":
 	case "55":
 	case "56":
 		m.mission = "Loading";
-		m.description = "";
+		m.description = "Loading using exos or ground loaders in a market or spaceport.";
 		break;
 	case "61":
 	case "62":
 	case "63":
 		m.mission = "Repairs";
-		m.description = "";
+		m.description = "Repair something. Could be anything from a spaceship, large vehicle or building to harvest machinery, a furnace or logging equipment.";
 		break;
 	case "64":
 	case "65":
 	case "66":
 		m.mission = "Diplomatic representation";
-		m.description = "";
+		m.description = "Represent a group of plebeians, workers or the Free League during negotiations.";
 		break;
 	}
 };
@@ -1731,18 +1731,18 @@ var complicationPilgrims = function() {
 	case "11":
 	case "12":
 	case "13":
-		return new complication( "Cult", "");
+		return new complication( "Cult", "A cult stands in the PCs' way. They could be withholding relics, blocking roads or trying to stop the construction of a temple or the fulfilling of a prophecy.");
 	case "14":
 	case "15":
 	case "16":
-		return new complication( "Nature's wrath", "");
+		return new complication( "Nature's wrath", "The party is subjected to nature's wrath. It could be anything from ion storms, bad weather and meteorite showers to landslides or flash floods.");
 	case "21":
 	case "22":
 	case "23":
 	case "24":
 	case "25":
 	case "26":
-		return new complication( "Doomsday prophecy", "");
+		return new complication( "Doomsday prophecy", "The end is nigh! A doomsday prophecy has been spoken that complicates the voyage.");
 	case "31":
 	case "32":
 	case "33":
@@ -1757,20 +1757,20 @@ var complicationPilgrims = function() {
 	case "46":
 	case "51":
 	case "52":
-		return new complication( "Lack of resources", "");
+		return new complication( "Lack of resources", "Something important is missing. It could be gear, fuel, raw materials, and knowledge or simply birr.");
 	case "53":
 	case "54":
 	case "55":
 	case "56":
-		return new complication( "Starvation", "");
+		return new complication( "Starvation", "For some reason, the food will not last.");
 	case "61":
 	case "62":
 	case "63":
-		return new complication( "Diva", "");
+		return new complication( "Diva", "A diva appears, in the form of a prophet, preacher or temple officer, hindering the group unless they are prepared to grovel.");
 	case "64":
 	case "65":
 	case "66":
-		return new complication( "Iconic intervention", "");
+		return new complication( "Iconic intervention", "The Icons manifest themselves somehow. Through an avatar, an omen, a miracle or some other way of the GM's choosing.");
 	}
 };
 
@@ -1784,21 +1784,21 @@ var complicationEntertainers = function() {
 	case "14":
 	case "15":
 	case "16":
-		return new complication( "Restrictions", "");
+		return new complication( "Restrictions", "A ban or high fee complicates the voyage.");
 	case "21":
 	case "22":
 	case "23":
 	case "24":
 	case "25":
 	case "26":
-		return new complication( "Nature's wrath", "");
+		return new complication( "Nature's wrath", "The party is subjected to nature's wrath. It could be anything from ion storms, bad weather and meteorite showers to landslides or flash floods.");
 	case "31":
 	case "32":
 	case "33":
 	case "34":
 	case "35":
 	case "36":
-		return new complication( "Rival group ", "");
+		return new complication( "Rival group ", "A competing party has the same goal as the expedition and tries to get there first or stop the PCs. They have roughly the same gear as the PCs.");
 	case "41":
 	case "42":
 	case "43":
@@ -1807,20 +1807,20 @@ var complicationEntertainers = function() {
 	case "46":
 	case "51":
 	case "52":
-		return new complication( "Lack of resources", "");
+		return new complication( "Lack of resources", "Something important is missing. It could be gear, fuel, raw materials, and knowledge or simply birr");
 	case "53":
 	case "54":
 	case "55":
 	case "56":
-		return new complication( "Wrong equipment", "");
+		return new complication( "Wrong equipment", "The group's gear is unfit for the task.");
 	case "61":
 	case "62":
 	case "63":
-		return new complication( "Diva", "");
+		return new complication( "Diva", "A diva appears, in the forms of an actor, director or artist, hindering the group unless they are prepared to grovel.");
 	case "64":
 	case "65":
 	case "66":
-		return new complication( "War", "");
+		return new complication( "War", "A violent event occurs, such as a war breaking out.");
 	}
 };
 
@@ -1834,21 +1834,21 @@ var complicationNomads = function() {
 	case "14":
 	case "15":
 	case "16":
-		return new complication( "The crack of the whip", "");
+		return new complication( "The crack of the whip", "The employer has thugs pushing the group to work faster. It could be stevedore aqbars, foremen or something similar.");
 	case "21":
 	case "22":
 	case "23":
 	case "24":
 	case "25":
 	case "26":
-		return new complication( "Nature's wrath", "");
+		return new complication( "Nature's wrath", "The party is subjected to nature's wrath. It could be anything from ion storms, bad weather and meteorite showers to landslides or flash floods.");
 	case "31":
 	case "32":
 	case "33":
 	case "34":
 	case "35":
 	case "36":
-		return new complication( "Corsairs", "");
+		return new complication( "Corsairs", "Corsairs or bandits attack the group's work site.");
 	case "41":
 	case "42":
 	case "43":
@@ -1857,54 +1857,22 @@ var complicationNomads = function() {
 	case "46":
 	case "51":
 	case "52":
-		return new complication( "Lack of resources", "");
+		return new complication( "Lack of resources", "Something important is missing. It could be gear, fuel, raw materials, and knowledge or simply birr");
 	case "53":
 	case "54":
 	case "55":
 	case "56":
-		return new complication( "Starvation", "");
+		return new complication( "Starvation", "For some reason, the food will not last.");
 	case "61":
 	case "62":
 	case "63":
-		return new complication( "Faction", "");
+		return new complication( "Faction", "A faction is blocking the work the group is supposed to do.");
 	case "64":
 	case "65":
 	case "66":
-		return new complication( "Rebels", "");
+		return new complication( "Rebels", "Rebels violently try to stop the group's work.");
 	}
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Table 38
 var employerFreeTraders = function(m) {
@@ -2219,7 +2187,7 @@ var locationFreeTraders = function(m) {
 	}
 };
 
-//Table 23
+//Table 42
 var complicationFreeTraders = function() {
 	var r = "" + roll() + roll();
 	switch (r) {
