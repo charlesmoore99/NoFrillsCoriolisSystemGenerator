@@ -21,6 +21,33 @@ var complication = function(c, d){
 	};
 };
 
+var misfortune = function(b, c, d){
+	var that = this;
+	
+	this.crewmember = b;0
+	this.misfortune = c;
+	this.misfortuneDescription = d;
+
+	this.print = function() {
+		debug(String.format(headerTemplate, "Misfortune: " + that.crewmember));
+		debug(String.format(cellTemplate, "Misfortune", that.misfortune));
+		debug(String.format(cellTemplate, "Misfortune Description", that.misfortuneDescription));
+	};
+};
+
+var landMisfortune = function(c, d){
+	var that = this;
+	
+	this.misfortune = c;
+	this.misfortuneDescription = d;
+
+	this.print = function() {
+		debug(String.format(headerTemplate, "Land Misfortune"));
+		debug(String.format(cellTemplate, "Misfortune", that.misfortune));
+		debug(String.format(cellTemplate, "Misfortune Description", that.misfortuneDescription));
+	};
+};
+
 var mission = function(t, m, d, c, b, e) {
 	var that = this;
 
@@ -2237,3 +2264,164 @@ var complicationFreeTraders = function() {
 		return new complication( "Saturated market","The market at the destination recently received a big shipment of goods similar to the PCs' and the prices have dropped.");
 	}
 };
+
+//Table 44
+var misfortuneTable = function (){
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return captainMisfortune();
+	case "2":
+		return sensorOparatorMisfortune();
+	case "3":
+		return gunnerMisfortune();
+	case "4":
+		return engineerMisfortune();
+	case "5":
+		return pilotMisfortune();
+	case "6":
+		return crewMisfortune();
+	};
+	
+};
+
+var captainMisfortune = function() {
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return new misfortune("Captain", "Stowaways", "An uninvited guest has snuck onboard and pleads with the captain's conscience. Who is the stowaway? And how will the captain handle the situation?");
+	case "2":
+		return new misfortune("Captain", "Distress Call", "A signal on the emergency frequency is intercepted. Who or what is seeking aid?");
+	case "3":
+		return new misfortune("Captain", "Unexpected Encounter", " Roll on the Encounters table. Can the captain avoid the encounter or not?");
+	case "4":
+		return new misfortune("Captain", "Illegal Cargo", "Someone is using the ship's cargo containers for smuggling. Who, and for what?");
+	case "5":
+		return new misfortune("Captain", "Haunting", "The lights flicker and systems turn on and off. Who or what is haunting the ship? Can the journey continue?");
+	case "6":
+		return new misfortune("Captain", "Bad Navigation", "The computer reports one set of coordinates, but the navigation beacon reports another. Where is the ship and what has happened?");
+	};
+};
+
+var sensorOparatorMisfortune = function() {
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return new misfortune("Sensor Operator", "Sensor Ghosts", "There is a quick flash on the screen. Is there something out there?");
+	case "2":
+		return new misfortune("Sensor Operator", "Sensor Glitch", "There is something wrong with the sensors. Is it because of broken internal wiring, or will the repairs require a spacewalk?");
+	case "3":
+		return new misfortune("Sensor Operator", "Transponder Malfunction", "There is something wrong with the ship's transponder. What is the ship claiming to be?");
+	case "4":
+		return new misfortune("Sensor Operator", "Overload", "Vital panels flicker and go dark. Something must be done before the systems fry.");
+	case "5":
+		return new misfortune("Sensor Operator", "Faulty Calibration", "There is someone following the ship! Or is there? The sensors give contradicting information. What has gone wrong?");
+	case "6":
+		return new misfortune("Sensor Operator", "Virus", "The screens are flooded with unintelligible symbols, and nothing works like it should.");
+	};			
+};
+
+var gunnerMisfortune = function() {
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return new misfortune("Gunner", "Disconnected systems", "One or more weapon systems stop responding. What has happened?");
+	case "2":
+		return new misfortune("Gunner", "Overheating", "A weapon system suddenly warns about over- heating. Why?");
+	case "3":
+		return new misfortune("Gunner", "Unintentional lock-on", "The lock-on signal whines loudly across the bridge. A weapon system has locked onto an object or another ship. What is going on?");
+	case "4":
+		return new misfortune("Gunner", "Sudden discahrge", "A weapon system fires a salvo. What triggered the firing?");
+	case "5":
+		return new misfortune("Gunner", "Armed torpedo", "The launch control djinn warns of an armed torpedo in the torpedo room. Will you be able to disarm it?");
+	case "6":
+		return new misfortune("Gunner", "Poor service", "Dirt or vermin have gotten deep into the core of a weapon system. Can it be cleaned out?");
+	};
+};
+
+
+var engineerMisfortune = function() {
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return new misfortune("Engineer", "Coughing grav projector", "The graviton flow is fluctuating. What is the problem?");
+	case "2":
+		return new misfortune("Engineer", "Transformer short circuit", "The power supply to some parts of the ship shuts down. What is causing it?");
+	case "3":
+		return new misfortune("Engineer", "Malfunctiong climate control", "The ship suddenly turns very hot or very cold. How can the problem be fixed?");
+	case "4":
+		return new misfortune("Engineer", "Vent problems", "The air becomes dry and increasingly stuffy. What has happened?");
+	case "5":
+		return new misfortune("Engineer", "Uninvited guest in the eingine room", "A pest of some sort is wreaking havoc in the engine room. What is it and how can it be caught?");
+	case "6":
+		return new misfortune("Engineer", "Striking trash compactor", "The trash compactor is not working like it should and gives off a rotten smell. How can it be repaired?");
+	};
+};
+
+var pilotMisfortune = function() {
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return new misfortune("Pilot", "Sudden evasive manuevers", "Something comes shooting right towards the ship. Will the pilot be able to evade a collision? What are the consequences of the maneuver?");
+	case "2":
+		return new misfortune("Pilot", "Manfunctioning thrusters", "The thrusters are acting strangely, the ship shakes and rolls. Why?");
+	case "3":
+		return new misfortune("Pilot", "Ion storm", "An ion storm hits the ship! Can the pilot navigate through it without it harming the passengers?");
+	case "4":
+		return new misfortune("Pilot", "Meteorite field", "A sudden bang, and then another. The ship has entered a meteorite field. Can the pilot escape the field before the ship is hit by a larger rock?");
+	case "5":
+		return new misfortune("Pilot", "Space debris", "The ship enters a field of junk and debris. What does it contain? And can the pilot get the ship to safety?");
+	case "6":
+		return new misfortune("Pilot", "Autonomous autopilot", " The ship suddenly changes course and speed, as if the controls have been possessed. What is causing this?");
+	};
+};
+
+
+var crewMisfortune = function() {
+	var r = "" + roll();
+	switch(r) {
+	case "1":
+		return new misfortune("Crew", "Hull breach", "The breach alarm goes off! The ship is venting oxygen into space and the hole is rapidly getting bigger. Can the group find and repair the hole fast enough?");
+	case "2":
+		return new misfortune("Crew", "Disabled gravity", " The artificial gravity switches off. Crewmembers and loose gear float around freely onboard. What is wrong?");
+	case "3":
+		return new misfortune("Crew", "Intruders", "Someone has snuck onboard. Who? And why?");
+	case "4":
+		return new misfortune("Crew", "Contagion", "One by one, the crewmembers start to feel sick. What is causing it?");
+	case "5":
+		return new misfortune("Crew", "Fire", " Smoke is pouring out of the vents – there is a fire some- where! Can the crew put it out before they lose control?");
+	case "6":
+		return new misfortune("Crew", "Radiation storm", "A violent radiation storm hits the ship and the crew must find shelter quickly. Will they make it?");
+	};
+};
+
+
+// Table 45
+var landMisfortuneTable = function (){
+	var r = "" + (roll() + roll());
+	switch(r) {
+	case "2":
+		return new landMisfortune("Spoiled provisions", "The group's food has somehow gone bad. If they fail to find new food, they will suffer the effects of Hunger (page 98 in the Coriolis core rulebook).");
+	case "3":
+		return new landMisfortune("Contagion", "Nausea and disease spread through the group. Everyone must test survival. A failed test results in 1 point of damage/day for D6 days.");
+	case "4":
+		return new landMisfortune("Bad weather", "Rain, snow and strong winds make the journey difficult. The PCs become wet, tired and cold and they all must test survival. A failed test results in 2 points of damage.");
+	case "5":
+		return new landMisfortune("Wild animals", "The PCs encounter wild animals. They might attack.");
+	case "6":
+		return new landMisfortune("Poor camp", "The camp is either poorly made or suffers an incident during the night. The PCs get little sleep and suffer 1 stress point from lack of sleep.");
+	case "7":
+		return new landMisfortune("Lost", " The group get lost and must struggle to find their way back. The PCs must test survival. A passed roll means that they find the path within the hour; failure means that they are lost for 3D6 hours.");
+	case "8":
+		return new landMisfortune("Insects/vermin", "Insects or vermin of some sort attack The PCs.");
+	case "9":
+		return new landMisfortune("Sinkhole/Landslide", "All PCs must test dexterity. Those who pass find safe ground, but those who fail fall into a hole or get stuck.");
+	case "10":
+		return new landMisfortune("Chased", " The group are being followed by someone or some- thing. All PCs must test survival; those who fail suffer 2 stress points from fear. And what if the pursuers catch up?");
+	case "11":
+		return new landMisfortune("Storm", "Dark clouds appear and a storm comes crashing down. The PCs must find shelter!");
+	case "12":
+		return new landMisfortune("Cold/Heat", " The temperature suddenly drops or rises. Unless the PCs find cover, use the rules for Cold (page 99 in the Coriolis core rulebook).");
+	};	
+};
+
